@@ -42,7 +42,7 @@ public class SingerServiceImplementation implements SingerService {
     public String getAllSingerNamesLike(String name)
     {
         List<Singer> singres = singerDao.getAllSingersLike(name);
-        List<String> singerNames = getAllSingers().stream().map(singer -> singer.getName()).collect(Collectors.toList());
+        List<String> singerNames = singres.stream().map(singer -> singer.getName()).collect(Collectors.toList());
         ObjectMapper obj = new ObjectMapper();
         String names = "";
         try {

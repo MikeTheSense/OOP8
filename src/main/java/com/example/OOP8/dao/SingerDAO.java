@@ -29,10 +29,13 @@ public class SingerDAO {
 
     public List<Singer> getAllSingersLike(String name) {
         try (Session session = HibernateUtil.configureSession()) {
+            session.beginTransaction();
             List<Singer> singers = new ArrayList<>();
+
             Query getAlbumByNameQuery = session.createQuery("from Singer where name like :name");
-            getAlbumByNameQuery.setParameter("name", name);
+            getAlbumByNameQuery.setParameter("name", name+"%");
             singers = getAlbumByNameQuery.getResultList();
+            session.getTransaction().commit();
             return singers;
         }
     }
