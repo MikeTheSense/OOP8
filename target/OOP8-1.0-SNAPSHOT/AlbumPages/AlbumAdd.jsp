@@ -22,8 +22,8 @@
                             Authors
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="authors">All Authors</a>
-                            <a class="dropdown-item" href="addauthor">Add new author</a>
+                            <a class="dropdown-item" href="allsingers">All Authors</a>
+                            <a class="dropdown-item" href="addsinger">Add new author</a>
                         </div>
                     </div>
                 </li>
